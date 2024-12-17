@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Optimizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Resume Optimizer</h1>
+    <form id="uploadForm">
+      <label for="resume">Upload Resume (PDF):</label>
+      <input type="file" id="resume" name="resume" accept="application/pdf" required />
+      
+      <label for="jobDescription">Job Description:</label>
+      <textarea id="jobDescription" name="jobDescription" rows="5" required></textarea>
+      
+      <button type="submit">Optimize Resume</button>
+    </form>
+
+    <div id="output">
+      <h2>Recommendations:</h2>
+      <pre id="recommendations"></pre>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
