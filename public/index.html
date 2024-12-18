@@ -9,20 +9,30 @@
 <body>
   <div class="container">
     <h1>Resume Optimizer</h1>
+    <div class="content-wrapper">
     <form id="uploadForm">
-      <label for="resume">Upload Resume (PDF):</label>
-      <input type="file" id="resume" name="resume" accept="application/pdf" required />
+      <div class="file-upload-area" id="fileDropArea">
+        <label for="resume" class="file-label" id="fileLabel">
+          <span id="dropText">Drag & Drop your Resume (PDF) here or click to upload</span>
+          <input type="file" id="resume" name="resume" accept="application/pdf" required hidden />
+        </label>
+      </div>
+      
       
       <label for="jobDescription">Job Description:</label>
       <textarea id="jobDescription" name="jobDescription" rows="5" required></textarea>
       
       <button type="submit">Optimize Resume</button>
+      <button type="button" id="reformatBtn">Optimize for ATS</button>
+      <button id="downloadBtn" style="display: none;">Download ATS Resume</button>
+
     </form>
 
-    <div id="output">
+    <div id="output" class="recommendations-section">
       <h2>Recommendations:</h2>
       <pre id="recommendations"></pre>
     </div>
+  </div>
   </div>
   <script src="script.js"></script>
 </body>

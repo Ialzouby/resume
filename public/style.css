@@ -1,59 +1,150 @@
+/* General styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
-  }
-  
-  .container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 500px;
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  label {
-    display: block;
-    margin-top: 10px;
-  }
-  
-  input, textarea, button {
-    width: 100%;
-    margin-top: 5px;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  
-  button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  #output {
-    margin-top: 20px;
-  }
-  
-  pre {
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-radius: 5px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+}
+
+.container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Modern Drag & Drop Upload Area */
+.file-upload-area {
+  border: 2px dashed #007bff;
+  border-radius: 8px;
+  padding: 30px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s, border-color 0.3s;
+  margin-bottom: 20px;
+}
+
+.file-upload-area:hover {
+  background-color: #e8f4ff;
+  border-color: #0056b3;
+}
+
+.file-label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #555;
+  font-weight: bold;
+}
+
+#dropText {
+  display: block;
+  font-size: 1rem;
+  color: #777;
+}
+
+.file-upload-area.drag-over {
+  background-color: #cce5ff;
+  border-color: #007bff;
+}
+
+textarea, button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#output {
+  margin-top: 20px;
+}
+
+pre {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+/* Flexbox to Align Form and Recommendations */
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between sections */
+  align-items: flex-start;
+}
+
+/* Form Section */
+.form-section {
+  flex: 1;
+  text-align: left;
+}
+
+.form-section label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.form-section input,
+.form-section textarea,
+.form-section button {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.form-section button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.form-section button:hover {
+  background-color: #0056b3;
+}
+
+/* Recommendations Section */
+.recommendations-section {
+  flex: 1;
+  text-align: left;
+  border-left: 2px solid #ddd;
+  padding-left: 20px;
+}
+
+.recommendations-section h2 {
+  margin-top: 0;
+}
